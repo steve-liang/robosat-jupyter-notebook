@@ -16,9 +16,9 @@ RUN mkdir -p /app/container_mount/checkpoints/
 RUN mkdir /app/robosat_container_files/
 
 # Copy our notebook and area of interest into docker
-COPY *.ipynb /app
-COPY osm/*.pbf /app/container_mount
-COPY images/* /app/images
+COPY *.ipynb /app/
+COPY osm/*.pbf /app/container_mount/
+COPY images/* /app/images/
 
 # Substitute required ENV variables 'DESIRED_ZOOM_LEVEL' and 'PUBLIC_IP'
 COPY entrypoint.sh /
